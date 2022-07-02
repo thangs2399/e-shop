@@ -2,27 +2,35 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/vars.css">
+        <link rel="icon" href="./images/app.svg">
         <link rel="stylesheet" href="./css/default1.css">
         <title>E-Shop</title>
     </head>
-    <body>
-        <main>
-            <div id="top-bar">
+    <body class="flex">
+        <header class="flex">
+            <!-- app logo --> 
+            <img id="app-logo" src="./images/app.svg" alt="app logo">
+            <!-- top search bar -->
+            <div id="search-bar" class="flex">
+                <input id="search-field" type="search" name="search" placeholder="Type Here...">
+                <button id="search-button">Search</button>
+            </div>
+            <!-- navs -->
+            <nav class="flex">
+                <ul id="nav-links" class="flex">
+                    <li><a id="profile"><img src="./images/person.svg" alt="profile"></a></li>
+                    <li><a id="cart"><img src="./images/cart.svg" alt="cart"></a></li>
+                    <li><p id="cart-count">1</p></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex">
+            <section>
 
-            </div>
-            <div id="empty1">
-
-            </div>
-            <div id="main-area">
-
-            </div>
-            <div id="empty2">
-                
-            </div>
-            <div id="footer">
-                <p>&#64;thangs</p>
-            </div>
+            </section>
         </main>
+        <footer class="flex">
+            <p>&#64;thangs</p>
+        </footer>
     </body>
 </html>

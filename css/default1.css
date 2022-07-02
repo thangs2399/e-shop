@@ -1,51 +1,135 @@
 
-body {
+:root {
+    --black1 : #000000;
+    --white1 : #FFFFFF;
+    --white2 : #F5F5F5;
+    --grey1 : #D9D9D9;
+    --blue1 : #0D99FF;
+    --blue2 : #AED6F1;
+    --pc : #74C947;
+}
+
+
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-main {
-    grid-template-columns: 12vw auto 12vw;
-    grid-template-rows: 15vh auto 25vh;
-    grid-template-areas: 
-        "top-bar top-bar top-bar"
-        "empty1 main-area empty2"
-        "footer footer footer";
-    background-color: aquamarine;
-    display: grid;
-    width: 100vw;
-    min-height: 150vh;
-}
-
-#top-bar{
-    grid-area: top-bar;
-    background-color: var(--white1);
-    border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
-}
-
-#empty1{
-    grid-area: empty1;
-    background-color: var(--white1);
-}
-
-#main-area{
-    grid-area: main-area;
-    background-color: var(--white2);
-    border-left: 0.1px solid rgba(0, 0, 0, 0.1);
-    border-right: 0.1px solid rgba(0, 0, 0, 0.1);
-}
-
-#empty2{
-    grid-area: empty2;
-    background-color: var(--white1);
-}
-
-#footer{
-    grid-area: footer;
-    background-color: var(--white1);
+.flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 0.1px solid rgba(0, 0, 0, 0.1);
-    
+}
+
+body {
+    background-color: white;
+}
+
+body.flex {
+    flex-direction: column;
+}
+
+/********** Header ***********/
+header {
+    height: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header.flex {
+    flex-direction: column;
+}
+
+/* App Logo */
+#app-logo {
+    position: absolute;
+    left: 100px;
+    display: block;
+    width: 75px;
+    height: 45px;
+}
+
+#app-logo:hover {
+    cursor: pointer;
+}
+
+/* Search Bar */
+#search-bar {
+    height: 45px;
+}
+
+/* Search Field */
+#search-field {
+    width: 400px;
+    height: 35px;
+    padding: 0 5px;
+    font-size: 1.1em;
+}
+
+/* Search Button */
+#search-button {
+    background-color: var(--pc);
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+#search-button:hover {
+    cursor: pointer;
+}
+
+/* Nav */
+nav {
+    position: absolute;
+    right: 100px;
+    height: 45;
+}
+
+/* Nav Links */
+#nav-links {
+    list-style: none;
+}
+
+/* #nav-links.flex {
+    column-gap: 50px;
+} */
+
+#nav-links img {
+    width: 75px;
+    height: 45px;
+}
+
+#nav-links img:hover {
+    cursor: pointer;
+    border-radius: 1px;
+    border-bottom: 2px solid var(--pc);
+}
+
+#profile {
+    margin-right: 50px;
+}
+
+#cart-count {
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+
+
+/********** Main ***********/
+main {
+    background-color: var(--white2);
+    width: 80%;
+    min-height: 100%;
+}
+main.flex {
+    flex-direction: column;
+}
+
+
+
+/********** Footer ***********/
+footer {
+    height: 200px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
