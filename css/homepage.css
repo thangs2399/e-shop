@@ -1,0 +1,101 @@
+
+
+main section {
+    width: 90%;
+    margin: 50px 0;
+}
+
+/********** Main Display **********/
+#main-display {
+    /* background: linear-gradient(to right top, var(--blue2), white); */
+    height: 400px;
+}
+
+/* Description and Stuff */
+#info {
+    width: 600px;
+    height: 300px;
+    line-height: 2em;
+}
+
+#description {
+    margin-right: 80px;
+}
+
+#description h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#description p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* Buy Button and More.. */
+#more {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+#more.flex {
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#more > button {
+    background-color: var(--blue1);
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+#more > button:hover {
+    cursor: pointer;
+}
+
+#more > div > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Product Picture */
+#product {
+    width: 450px;
+    height: 260px;
+}
+
+
+
+
+/********** Item Displays **********/
+.item-display {
+    column-gap: 50px;
+    height: 400px;
+}
+
+.item {
+    width: 300px;
+    height: 300px;
+}
+
+.item:hover {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.item.flex {
+    flex-direction: column;
+}
+
+.thumb {
+    height: 280px;
+}
+
+.price {
+    height: 20px;
+}
