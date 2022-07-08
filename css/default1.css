@@ -30,6 +30,8 @@ body.flex {
     flex-direction: column;
 }
 
+
+
 /********** Header ***********/
 header {
     position: relative;
@@ -41,6 +43,7 @@ header {
 header.flex {
     flex-direction: column;
 }
+
 
 /* App Logo */
 #app-logo {
@@ -54,6 +57,7 @@ header.flex {
 #app-logo:hover {
     cursor: pointer;
 }
+
 
 /* Search Bar */
 #search-bar {
@@ -82,6 +86,7 @@ header.flex {
     cursor: pointer;
 }
 
+
 /* Nav */
 nav {
     position: absolute;
@@ -92,15 +97,7 @@ nav {
 /* Nav Links */
 #nav-links {
     list-style: none;
-}
-
-/* #nav-links.flex {
-    column-gap: 50px;
-} */
-
-#nav-links img {
-    width: 75px;
-    height: 45px;
+    position: relative;
 }
 
 #nav-links img:hover {
@@ -109,14 +106,60 @@ nav {
     border-bottom: 2px solid black;
 }
 
-#profile {
+
+/* Options Dropdown */
+#dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+/* show options while hover */
+#dropdown:hover #dropdown-options{
+    display: block;
+}
+
+#dropdown-icon {
+    bottom: 0;
     margin-right: 50px;
+    display: block;
+}
+
+#dropdown-icon img {
+    width: 75px;
+    height: 45px;
+}
+
+#dropdown-options { 
+    display: none;
+    position: absolute;
+    min-width: 75px;
+    background-color: white;
+    box-shadow: 1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#dropdown-options a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+#dropdown-options a:hover {
+    background-color: #ddd;
+}
+
+/* Cart */
+#cart img {
+    width: 75px;
+    height: 45px;
 }
 
 #cart-count {
     font-size: 1.2em;
     font-weight: 900;
 }
+
+
 
 
 
@@ -128,7 +171,6 @@ main {
 }
 main.flex {
     flex-direction: column;
-    background: linear-gradient(var(--pc), var(--white1) 30%);
 }
 
 

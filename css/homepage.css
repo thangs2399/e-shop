@@ -1,5 +1,10 @@
 
 
+/* added linear-gradient */
+main.flex {
+    background: linear-gradient(var(--pc), var(--white1) 35%);
+}
+
 main section {
     width: 90%;
     margin: 50px 0;
