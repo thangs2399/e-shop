@@ -7,12 +7,20 @@
     --blue1 : #0071e3;
     --blue2 : #AED6F1;
     --pc : #74C947;
+
+    --normal-font: "Times New Roman", Times, serif;
+    --title-font: Arial, Helvetica, sans-serif;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: var(--normal-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font);
 }
 
 img {

@@ -13,22 +13,22 @@ main section {
 /********** Main Display **********/
 #main-display {
     /* background: linear-gradient(to right top, var(--blue2), white); */
-    height: 400px;
+    height: 25em;
 }
 
 /* Description and Stuff */
 #info {
-    width: 600px;
-    height: 300px;
+    min-width: max-content;
+    height: 18.75em;
     line-height: 2em;
 }
 
 #description {
-    margin-right: 80px;
+    min-width: max-content;
 }
 
 #description h1 {
-    margin-bottom: 20px;
+    line-height: 2.5em;
     font-size: 2em;
     font-weight: bold;
 }
@@ -40,19 +40,20 @@ main section {
 
 /* Buy Button and More.. */
 #more {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
+    min-width: max-content;
 }
 
 #more.flex {
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 1em;
 }
 
 #more > button {
     background-color: var(--blue1);
-    width: 60px;
-    height: 20px;
+    width: 3.75em;
+    height: 1.25em;
     border-radius: 5px;
     border: none;
     color: white;
@@ -69,22 +70,21 @@ main section {
 
 /* Product Picture */
 #product {
-    width: 450px;
-    height: 260px;
+    max-width: 28.125em;
+    height: 16.25em;
 }
-
 
 
 
 /********** Item Displays **********/
 .item-display {
-    column-gap: 50px;
-    height: 400px;
+    column-gap: 3.125em;
+    height: 25em;
 }
 
 .item {
-    width: 300px;
-    height: 300px;
+    width: 18.75em;
+    height: 18.75em;
 }
 
 .item:hover {
@@ -98,9 +98,52 @@ main section {
 }
 
 .thumb {
-    height: 280px;
+    height: 17.5em;
 }
 
 .price {
-    height: 20px;
+    height: 1.25em;
+}
+
+@media (max-width:1025px) {
+
+    main.flex {
+        background: linear-gradient(var(--blue1), var(--white1) 35%);
+    }
+
+    #main-display.flex {
+        flex-direction: column;
+    }
+
+    #info {
+        margin-top: 2.5em;
+        margin-bottom: 3.5em;
+    }
+
+    #more {
+        margin-bottom: 2.5em;
+    }
+
+    #more.flex {
+        flex-direction: row;
+        column-gap: 0.7em;
+    }
+
+    #product {
+        max-width: 20em;
+    }
+
+}
+
+@media (min-width:1025px) {
+
+    #more {
+        margin-left: 5em;
+    }
+
+    #product {
+        margin-left: 10em;
+        min-width: 12em;
+    }
+
 }
