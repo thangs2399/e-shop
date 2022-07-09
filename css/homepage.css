@@ -1,8 +1,9 @@
 
 
 /* added linear-gradient */
-main.flex {
-    background: linear-gradient(var(--pc), var(--white1) 35%);
+main {
+    /* background: linear-gradient(var(--pc), var(--white1) 35%); */
+    background-color: white;
 }
 
 main section {
@@ -14,12 +15,18 @@ main section {
 #main-display {
     /* background: linear-gradient(to right top, var(--blue2), white); */
     height: 25em;
+    background: linear-gradient(var(--pc), var(--white1) 95%);
+    width: 100%;
+    height: fit-content;
+    min-width: fit-content;
+    margin-top: 0;
+    padding: 2em 1em;
 }
 
 /* Description and Stuff */
 #info {
     min-width: max-content;
-    height: 18.75em;
+    height: max-content;
     line-height: 2em;
 }
 
@@ -42,6 +49,8 @@ main section {
 #more {
     font-size: 1em;
     font-weight: 400;
+    width: max-content;
+    height: max-content;
     min-width: max-content;
 }
 
@@ -79,7 +88,7 @@ main section {
 /********** Item Displays **********/
 .item-display {
     column-gap: 3.125em;
-    height: 25em;
+    min-height: 25em;
 }
 
 .item {
@@ -105,12 +114,17 @@ main section {
     height: 1.25em;
 }
 
-@media (max-width:1025px) {
+@media (max-width:649px) {
+
+    main {
+        min-width: 18.75em;
+    }
 
     main.flex {
         background: linear-gradient(var(--blue1), var(--white1) 35%);
     }
 
+    /* Main Display */
     #main-display.flex {
         flex-direction: column;
     }
@@ -130,12 +144,69 @@ main section {
     }
 
     #product {
-        max-width: 20em;
+        max-width: 15em;
+    }
+
+    /* Item Display */
+    .item-display.flex {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 8em;
     }
 
 }
 
-@media (min-width:1025px) {
+@media (min-width: 650px) and (max-width:960px) {
+
+    main {
+        min-width: 18.75em;
+    }
+
+    /* main.flex {
+        background: linear-gradient(var(--blue1), var(--white1) 35%);
+    } */
+
+    /* Main Display */
+    #main-display.flex {
+        flex-direction: column;
+    }
+
+    #info {
+        margin-top: 2.5em;
+        margin-bottom: 3.5em;
+    }
+
+    #more {
+        margin-bottom: 2.5em;
+    }
+
+    #more.flex {
+        flex-direction: row;
+        column-gap: 0.7em;
+    }
+
+    #product {
+        max-width: 25em;
+    }
+
+    /* Item Display */
+    .item-display {
+        flex-wrap: wrap;
+    }
+
+    .item-display.flex {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        width: 12.2em; 
+    }
+
+}
+
+@media (min-width:961px) {
 
     #more {
         margin-left: 5em;
