@@ -10,7 +10,9 @@
     <body class="flex">
         <header class="flex">
             <!-- app logo --> 
-            <img id="app-logo" src="./images/app.svg" alt="app logo">
+            <div id="app-logo">
+                <img src="./images/app.svg" alt="app logo">
+            </div>
             <!-- top search bar -->
             <div id="search-bar" class="flex">
                 <input id="search-field" type="search" name="search" placeholder="Type Here...">
@@ -23,9 +25,9 @@
 
                     <!-- Adding Dropdown for profile nav -->
                     <li id="dropdown">
-                        <a id="dropdown-icon">
+                        <div id="dropdown-icon">
                             <img src="./images/person.svg" alt="options">
-                        </a>
+                        </div>
                         <div id="dropdown-options">
                             <a href="#">Profile</a>
                             <a href="#">Orders</a>

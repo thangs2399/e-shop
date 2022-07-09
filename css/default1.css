@@ -9,11 +9,14 @@
     --pc : #74C947;
 }
 
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+img {
+    max-width: 100%;
 }
 
 .flex {
@@ -30,7 +33,7 @@ body.flex {
     flex-direction: column;
 }
 
-
+ 
 
 /********** Header ***********/
 header {
@@ -41,15 +44,12 @@ header {
 }
 
 header.flex {
-    flex-direction: column;
+    justify-content: space-around;
 }
 
 
 /* App Logo */
-#app-logo {
-    position: absolute;
-    left: 100px;
-    display: block;
+#app-logo img {
     width: 75px;
     height: 45px;
 }
@@ -59,40 +59,33 @@ header.flex {
 }
 
 
-/* Search Bar */
+/*** Search Bar ***/
 #search-bar {
-    height: 45px;
+    height: 3em;
 }
 
-/* Search Field */
+/**** Search Field ****/
 #search-field {
-    width: 400px;
-    height: 35px;
+    width: 25em;
+    height: 2em;
     padding: 0 5px;
     font-size: 1.1em;
 }
 
-/* Search Button */
+/***** Search Button *****/
 #search-button {
     color: white;
     font-size: 1.005em;
     background-color: var(--blue1);
-    width: 100px;
-    height: 35px;
-    margin-left: 10px;
+    width: 6.25em;
+    height: 2em;
+    margin-left: 1em;
 }
 
 #search-button:hover {
     cursor: pointer;
 }
 
-
-/* Nav */
-nav {
-    position: absolute;
-    right: 100px;
-    height: 45;
-}
 
 /* Nav Links */
 #nav-links {
@@ -111,6 +104,7 @@ nav {
 #dropdown {
     display: inline-block;
     position: relative;
+    margin-right: 2em;
 }
 
 /* show options while hover */
@@ -120,7 +114,6 @@ nav {
 
 #dropdown-icon {
     bottom: 0;
-    margin-right: 50px;
     display: block;
 }
 
@@ -158,8 +151,6 @@ nav {
     font-size: 1.2em;
     font-weight: 900;
 }
-
-
 
 
 
